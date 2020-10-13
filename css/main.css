@@ -1,0 +1,20 @@
+html, body {
+    background-color: #212121;
+}
+
+div {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+p {
+  color: #C1C0C0;
+  font-family: 'Roboto Condensed',
+  sans-serif;
+  font-size: 2rem;
+}

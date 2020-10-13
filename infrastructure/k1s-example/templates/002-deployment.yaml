@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: "{{ .Values.example.name }}"
+  namespace: "{{ .Values.example.namespace }}"
+spec:
+  replicas: {{ .Values.example.replicas }}
+  selector:
+    matchLabels:
+      app: "{{ .Values.example.name }}"
+  template:
+    metadata:
+      labels:
+        app: "{{ .Values.example.name }}"
+    spec:
+      containers:
+      - name: "{{ .Values.example.name }}"
+        image: "{{ .Values.example.image }}"
+        imagePullPolicy: "{{ .Values.example.pullPolicy }}"
+        ports:
+        - containerPort: {{ .Values.example.service.ports.port }}
